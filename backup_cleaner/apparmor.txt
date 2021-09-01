@@ -1,0 +1,16 @@
+#include <tunables/global>
+
+profile backup_cleaner flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+  
+  # Capabilities
+  file,
+  signal,
+
+  # Bashio
+  /usr/lib/bashio/** ix,
+  /tmp/** rw,
+
+  # Read-only access to options
+  /data/** r,
+}

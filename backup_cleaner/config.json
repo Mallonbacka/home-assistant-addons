@@ -1,0 +1,17 @@
+{
+  "name": "Backup Cleaner",
+  "version": "1.0.0",
+  "slug": "backup_cleaner",
+  "description": "A tiny script to delete old backups",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "hassio_api": true,
+  "hassio_role": "backup",
+  "boot": "auto",
+  "options": {
+    "delay": 10800
+  },
+  "schema": {
+	  "delay": "int"
+  }
+}
